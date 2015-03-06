@@ -1,0 +1,74 @@
+#pgnsbox{
+	position:absolute;
+}
+#pgnsbox span{
+	display:block;
+	float:left;
+}
+
+/* Buttons */
+#pgnsbuttons{
+	position: absolute;
+	bottom:0px;
+	right:10px;
+}
+#pgnsbuttons span,
+#pgnsbuttons span img{
+	color:#0080FF;
+	padding:0;
+	margin:0;
+	cursor:pointer;
+	display:inline;
+}
+#pgnsbuttons span.active,
+#pgnsbuttons span:hover{}
+
+/* Buttons Large*/
+#pgnsbuttonslargeleft{
+	position: absolute;
+	top: 37%;
+	left:5px;
+}
+#pgnsbuttonslargeright{
+	position: absolute;
+	top: 37%;
+	right:5px;
+}
+#pgnsbuttonslargeleft span,
+#pgnsbuttonslargeleft span img,
+#pgnsbuttonslargeright span,
+#pgnsbuttonslargeright span img{
+	padding:0;
+	margin:0;
+	cursor:pointer;
+	display:inline;
+}
+
+#pgnsbuttonslargeleft span.active,
+#pgnsbuttonslargeleft span:hover,
+#pgnsbuttonslargeright span.active,
+#pgnsbuttonslargeright span:hover{}
+
+
+#pgnsboxs{
+	padding: 0px;
+	margin: 0px;
+}
+
+#pgnsboxm{
+	position:relative;
+	overflow:hidden;
+}
+
+#pgnsbox span img{
+	display:block;
+	border:none;
+}
+
+#pgnsinfo{
+
+}
+
+#pgnsinfo {
+	padding: 10px;
+}

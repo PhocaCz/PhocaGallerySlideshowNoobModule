@@ -1,0 +1,20 @@
+#pgnsbox span img{
+	display:block;
+	border:none;
+	position: absolute;
+}
+
+#pgnsinfo {
+	display:none;
+}
+
+#pgnsinfo div.pgnsboxin {
+	
+	opacity: 0;
+}
+
+#pgnsinfo div.pgnsboxin{
+	display:block;
+	position: absolute;
+	border: none;
+}

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+	<name>mod_phocagallery_slideshow_noob</name>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<creationDate>01/02/2012</creationDate>
+	<copyright>Jan Pavelka</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail></authorEmail>
+	<authorUrl>www.phoca.cz</authorUrl>
+	<version>1.0.6</version>
+	<description>MOD_PHOCAGALLERY_SLIDESHOW_NOOB_DESCRIPTION</description>
+	
+	<files>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>javascript</folder>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<filename module="mod_phocagallery_slideshow_noob">mod_phocagallery_slideshow_noob.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_phocagallery_slideshow_noob.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_phocagallery_slideshow_noob.sys.ini</language>
+	</languages>
+
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+<field name="type" type="list" default="1" label="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_MODULE_TYPE_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_MODULE_TYPE_DESC">
+	<option value="1">MOD_PHOCAGALLERY_SLIDESHOW_NOOB_NOOB</option>
+	<option value="2">MOD_PHOCAGALLERY_SLIDESHOW_NOOB_FADE</option>
+</field>			
+			
+			
+<field name="category_id" type="text" default="" label="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_CATEGORY_ID_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_CATEGORY_ID_DESC" />
+<field name="count_images" type="text" default="5" label="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_COUNT_IMAGES_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_COUNT_IMAGES_DESC" />
+
+<field name="width" type="text" default="970" label="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_WIDTH_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_WIDTH_DESC" />
+<field name="height" type="text" default="230" label="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_HEIGHT_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_HEIGHT_DESC" />
+<field name="duration" type="text" default="2000" label="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_DURATION_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_DURATION_DESC" />
+
+<field name="display_buttons" type="list" default="1" label="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_DISPLAY_BUTTONS_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_DISPLAY_BUTTONS_DESC">
+	<option value="0">MOD_PHOCAGALLERY_SLIDESHOW_NOOB_NO</option>
+	<option value="1">MOD_PHOCAGALLERY_SLIDESHOW_NOOB_YES</option>
+	<option value="2">MOD_PHOCAGALLERY_SLIDESHOW_NOOB_YES_LARGE_PREV_NEXT</option>
+</field>
+
+<field name="display_desc" type="list" default="1" label="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_DISPLAY_DESC_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_DISPLAY_DESC_DESC">
+	<option value="0">MOD_PHOCAGALLERY_SLIDESHOW_NOOB_NO</option>
+	<option value="1">MOD_PHOCAGALLERY_SLIDESHOW_NOOB_YES</option>
+</field>
+
+<field name="css_description" type="textarea" rows="15" cols="40" default="width:500px;
+	height:100px;
+	-moz-border-radius: 10px 0px 0px 0px;
+	-webkit-border-radius: 10px 0px 0px 0px;
+	border-radius: 10px 0px 0px 0px;
+	color: #000;
+	bottom:0px;
+	right:0px;
+	background:#fff;
+	position:absolute;" label="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_CSS_DESC_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_CSS_DESC_DESC" />
+	
+	<field name="desc_opacity" type="text" default="0.6" label="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_DESC_OPACITY_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_DESC_OPACITY_DESC" />
+	
+	<field name="fx_transition" type="list" default="Bounce" label="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_FX_TRANSITION_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_FX_TRANSITION_DESC">
+			<option value="linear">Linear</option>
+			<option value="Quad">Quadratic</option>
+			<option value="Cubic">Cubic</option>
+			<option value="Quart">Quartic</option>
+			<option value="Quint">Quintic</option>
+			<option value="Sine">Sinusoidal</option>
+			<option value="Expo">Exponential</option>
+			<option value="Circ">Circular</option>
+			<option value="Bounce">Bouncing</option>
+			<option value="Back">Back</option>
+			<option value="Elastic">Elastic</option>
+	</field>
+	<field name="fx_ease" type="list" default="easeOut" label="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_FX_EASE_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_FX_EASE_DESC">
+			<option value="easeIn">easeIn</option>
+			<option value="easeOut">easeOut</option>
+			<option value="easeInOut">easeInOut</option>
+	</field>
+	
+	<field name="duration_fade" type="text" default="1600" label="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_DURATION_FADE_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_DURATION_FADE_DESC" />
+	
+			</fieldset>
+			<fieldset name="advanced">
+		
+<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				
+				<field name="module_css_style" type="text" label="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_CSS_STYLE_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NOOB_CSS_STYLE_DESC" />
+				
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+		
+			</fieldset>
+		</fields>
+	</config>
+</extension>
